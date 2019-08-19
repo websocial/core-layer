@@ -5,5 +5,15 @@ module.exports = async function(req, res) {
     //This executes a promise object
     //You must use await
     const users = await User.find({})
-    res.send(users)
+
+    // Brute force solution
+    // const objs = []
+    // users.array.forEach(user => {
+    //     objs.push({id: user.id,
+    //          fullName: user.fullName,
+    //           email: user.email})
+    // });
+
+   
+    res.send(objs)
 }
