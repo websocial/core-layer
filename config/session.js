@@ -20,7 +20,8 @@ module.exports.session = {
   ***************************************************************************/
   secret: '77d84ed9e8f10ae78dfcedd4a91d4375',
   adapter: 'connect-mongo',
-  url: 'mongodb://fullstackadmin:fullstackadmin111@ds245677.mlab.com:45677/heroku_wcqm39fl',
+  url: 'mongodb://mwong153:goodboy426@cluster0-shard-00-00.r4she.mongodb.net:27017,cluster0-shard-00-01.r4she.mongodb.net:27017,cluster0-shard-00-02.r4she.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-8latbl-shard-0&authSource=admin&retryWrites=true&w=majority',
+  // url: 'mongodb://fullstackadmin:fullstackadmin111@ds245677.mlab.com:45677/heroku_wcqm39fl',
   collection: 'sessions',
   /***************************************************************************
   *                                                                          *
