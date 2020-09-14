@@ -1,9 +1,7 @@
 module.exports = async function(req, res) {
     console.log("Listing out all users now...")
 
-    //fetch all users using Waterline
-    //This executes a promise object
-    //You must use await
+    //await is used to ensure User.find is complete before executing code under it
     const users = await User.find({})
 
     // Brute force solution
@@ -14,6 +12,11 @@ module.exports = async function(req, res) {
     //           email: user.email})
     // });
 
+    const lessDetailedUsers = []
+    users.forEach(user => {
+        lessDetailedUsers.push({id: user.id, fullName: user.fullName})
+    });
+
    
-    res.send(objs)
+    res.send(lessDetailedUsers)
 }
